@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #fbf9f5;
+    --bg-surface: #ffffff;
+    --bg-muted: #f4f0e6;
+    --border-light: #e8e4dc;
+    --text-primary: #1a1917;
+    --text-muted: #6b665e;
+    --accent-gold: #b88e4c;
+    --accent-forest: #2d4a3e;
+    --accent-terracotta: #8c3b30;
+    --accent-navy: #1e293b;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  code, pre, kbd {
+    font-family: var(--font-mono), monospace;
+  }
+}
+
+/* Editorial Paper Card Styling */
+.paper-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e4dc;
+  box-shadow: 0 4px 20px -2px rgba(26, 25, 23, 0.04), 0 2px 6px -1px rgba(26, 25, 23, 0.02);
+}
+
+.paper-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.paper-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -4px rgba(26, 25, 23, 0.08), 0 4px 10px -2px rgba(26, 25, 23, 0.04);
+  border-color: #d8d3c7;
+}
+
+.paper-modal {
+  background-color: #ffffff;
+  border: 1px solid #d8d3c7;
+  box-shadow: 0 25px 50px -12px rgba(26, 25, 23, 0.18);
+}
+
+.paper-pill {
+  background-color: #f4f0e6;
+  border: 1px solid #e2dcd0;
+  color: #4a463f;
+}
+
+/* Typography Editorial Accents */
+.text-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.text-gold {
+  color: #b88e4c;
+}
+
+/* Custom Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbf9f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d3c7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b88e4c;
+}
